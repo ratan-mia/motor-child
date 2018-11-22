@@ -87,7 +87,7 @@
                               $refrered_car_link = get_the_permalink();
                              $refer_content = "Dear 
                              ".$friendsName.",
-                             Your friend ".$yourName." wanted to share ".$refrered_car." with you. Please check it out from the link below:
+                             Your friend ".$yourName." wanted to share the ".$refrered_car." with you. Please check it out from the link below:
                                 ".$refrered_car_link."
 
                                 If you have any question of queries, please feel free to call us or visit our website for more details. 
