@@ -1,4 +1,20 @@
 <?php 
+$car_object = new vcAsianCarElements();
+$car_details = $car_object -> vc_asian_car_details_html($atts);
+$car_datas = get_post_meta( get_the_ID());
+$car_title = get_the_title();
+$featured_img_src = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id()) , 'full');
+$additional_features = $car_datas['additional_features'][0];
+$features_array = explode(",",$additional_features);
+$car_features = '';
+$car_features = '<ul class="asian_car_details">';
+  
+  foreach ($features_array as $car_feature) {
+  $car_features .='<li>'.$car_feature.'</li>';
+  }
+  
+$car_features .='</ul>';
+
                     // Response Generation Function
 
                         $response = "";
@@ -96,6 +112,8 @@
                                 Regards
                                 The Asian Imports Team 
                                 ";
+
+                            $refer_content .=
                             $message_sent = "Thankyou. The details of the car you selcted will be emailed to your friend shortly.";
 
                              //validate email
